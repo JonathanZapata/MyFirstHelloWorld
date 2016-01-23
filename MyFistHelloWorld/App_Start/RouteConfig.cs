@@ -18,6 +18,13 @@ namespace MyFistHelloWorld
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            //routes.MapRoute("View", "View/ViewCustomer/{id}",
+            //    new
+            //    {
+            //        Controller = "Customer",
+            //        Action = "DisplayCustomer",
+            //        id = 0
+            //    }, new {id = @"\d{1,2}"});
         }
     }
 }
