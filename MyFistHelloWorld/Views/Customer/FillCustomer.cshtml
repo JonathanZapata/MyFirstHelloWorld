@@ -1,0 +1,40 @@
+﻿@model  MyFistHelloWorld.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=devide-width" />
+    <title>FillCustomer</title>
+</head>
+<body>
+<div>
+    @*<form action="DisplayCustomer" method="post">
+        Customer ID: <input type="text" name="customercod"/><br/>
+        Customer Nombre: <input type="text" name="customerman"/><br/>
+        Customer Cantidad: <input type="text" name="customeramo"/><br/>
+        <input type="submit" value="Enviar"/>
+    </form>*@
+    @using (Html.BeginForm("DisplayCustomer", "Customer", FormMethod.Post))
+    {
+        <p>
+            @Html.LabelFor(model => model.Code, "Codigo")
+            @Html.EditorFor(model => model.Code)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Name, "Nombrecito")
+            @Html.EditorFor(model => model.Name)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Amount, "Codigo")
+            @Html.EditorFor(model => model.Amount)
+        </p>
+        <input type="submit" value="Enviar"/ >
+    }
+</div>
+</body>
+</html>
